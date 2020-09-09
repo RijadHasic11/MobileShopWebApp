@@ -1,0 +1,58 @@
+﻿@model NoviProjekat.Web.ViewModels.NabavkaStavkeDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+}
+
+<h2>Dodaj novi ili uredi postojeci artikal</h2>
+
+<form id="formaId">
+    <input type="hidden" value="@Model.NabavkaId" name="NabavkaId" />
+    <input type="hidden" value="@Model.Id" name="Id" />
+
+    <br />
+    <label>Artikal: </label>
+    <select name="ArtikalId">
+        <option>(Odaberite artikal)</option>
+        @foreach (SelectListItem x in Model.artikli)
+        {
+            if (x.Value == Model.ArtikalId.ToString())
+            {
+                <option value="@x.Value" selected>@x.Text</option>
+            }
+            else
+            {
+                <option value="@x.Value">@x.Text</option>
+            }
+
+        }
+
+    </select>
+    <div>
+        <label>Kolicina: </label><input type="text" name="Kolicina" />
+    </div>
+    <br />
+    <br />
+    <input id="submitButton" type="submit" value="Snimi" />
+</form>
+
+<script>
+
+    $("#submitButton").click(function (event) {
+
+        var forma = $("#formaId");
+        $.ajax({
+
+            type: "POST",
+            url: "/NabavkaStavke/Snimi",
+            data: forma.serialize(),
+            success: function (rezultat) {
+                $("#neki").html(rezultat);
+            }
+        }
+        );
+    });
+
+</script>
+
+
+

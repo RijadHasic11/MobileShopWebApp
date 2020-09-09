@@ -1,0 +1,40 @@
+﻿@model IEnumerable<NoviProjekat.Data.EntityModels.Proizvodjac>
+
+@{
+    ViewData["Title"] = "Prikazi";
+}
+
+<h2>Proizvođači</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Dodaj">Dodaj novog proizvođača</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                Logo
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    <img style="width:30px" class="img-responsive full-width" src="data:image/jpeg;base64,@Convert.ToBase64String(item.Slika)" />
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Promijeni" asp-route-id="@item.Id">Promijeni</a> |
+                    <a class="btn btn-danger" asp-action="Izbrisi" asp-route-id="@item.Id">Izbriši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

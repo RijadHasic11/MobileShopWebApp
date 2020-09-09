@@ -1,0 +1,83 @@
+﻿@model IEnumerable<NoviProjekat.Data.EntityModels.Artikal>
+
+@{
+    ViewData["Title"] = "Prikazi";
+}
+
+<h2>Artikli</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Dodaj">Dodaj novi Artikal</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Boja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cijena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Novo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpisArtikla)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naziv)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Model.Naziv)
+            </th>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Boja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cijena) KM
+            </td>
+            <td>
+
+
+                @if (@item.Novo)
+                {
+                    <p>DA</p>
+                }
+                else
+                {
+                    <p>NE</p>
+                }
+
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.OpisArtikla)
+            </th>
+
+
+
+            <td>
+                <a class="btn btn-primary" asp-action="Detalji" asp-route-id="@item.Id">Detalji</a> |
+                <a class="btn btn-primary" asp-action="Promijeni" asp-route-id="@item.Id">Promijeni</a> |
+                <a class="btn btn-danger" asp-action="Izbrisi" asp-route-id="@item.Id">Izbriši</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+

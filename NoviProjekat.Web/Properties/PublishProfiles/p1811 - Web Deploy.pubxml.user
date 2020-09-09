@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf+5XRCd6mkCaIe0MsWBAfwAAAAACAAAAAAAQZgAAAAEAACAAAAD/WSGum/V4C777wGrMO15hn8mZgxxWRRNm6HORaM/36AAAAAAOgAAAAAIAACAAAADCGcrE+h2+RoBLKmJdcbBf5FjXL9IPEk5QlHT5u22h/YAAAACTesF2q3cqedE/+gMUnz+hh0nWtOJvutkym1hm7JDQGhuO8Ysn0BZT1CjycTZTLiD3Q1TQ2grTqKcPVNlw6ln1/tlwiTGT/gusaqIwvkr65aewkt271csLo1ecibvd0PC0cBi07jxTfioks6gEYbbsfnyazpP6FPkk64m2PxnlBkAAAADO+Xx8gXUCjbbrBOD04AxMUokNUPbBEdvIDJv0CIRLfvDrpmKLe+QCSznoDWWCAHorNqDLzOYRgHw3HLtwZJzB</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="localDB">
+      <Value>Data Source=tcp:p1811dbserver.database.windows.net,1433%3bInitial Catalog=p1811_db%3bUser Id=EminRiko%40p1811dbserver%3bPassword=Skazline11</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="NoviProjekat.Data.MyContext">
+      <Value>Data Source=tcp:p1811dbserver.database.windows.net,1433%3bInitial Catalog=p1811_db%3bUser Id=EminRiko%40p1811dbserver%3bPassword=Skazline11</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<NoviProjekat.Data.EntityModels.ObavijestAdmin>
+
+@{
+    ViewData["Title"] = "Prikazi";
+}
+
+<h2>Obavijesti</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Dodaj">Dodaj novu obavijest</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naslov)
+            </th>
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naslov)
+                </td>
+
+                <td>
+                    <a class="btn btn-primary" asp-action="Promijeni" asp-route-id="@item.Id">Promijeni</a> |
+                    <a class="btn btn-danger" asp-action="Izbrisi" asp-route-id="@item.Id">Izbrisi</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

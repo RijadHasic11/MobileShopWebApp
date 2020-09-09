@@ -1,0 +1,61 @@
+﻿@model NoviProjekat.Data.EntityModels.Artikal
+
+@{
+    ViewData["Title"] = "Details";
+    byte[] slika = null;
+}
+
+<div>
+    <h4>Artikal</h4>
+    <hr />
+    <img style="left:10%;border:solid lightgrey 2px;float:left" class="img-responsive full-width" src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Slika)" />
+    <div style="float:left;display:inline;left:1px;padding-top:20px">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Naziv)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Model)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Model.Id)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Boja)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Boja)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cijena)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Cijena)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Novo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Novo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.OpisArtikla)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OpisArtikla)
+            </dd>
+            <dd style="padding-top:10px">
+                <div>
+                    <a class="btn btn-primary" asp-action="Promijeni" asp-route-id="@Model.Id">Promijeni</a> |
+                    <a class="btn btn-default" asp-action="Prikazi">Nazad na listu</a>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+
+

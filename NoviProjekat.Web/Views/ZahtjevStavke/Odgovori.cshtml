@@ -1,0 +1,56 @@
+﻿@model NoviProjekat.Web.ViewModels.ZahtjevStavkeDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+}
+
+<h2>Dodaj novi ili uredi postojeci odgovor</h2>
+
+<form id="formaId">
+    <input type="hidden" value="@Model.ZahtjevId" name="ZahtjevId" />
+    <input type="hidden" value="@Model.Id" name="Id" />
+
+    <br />
+    <select name="ProdavacId">
+        <option>(Odaberite Prodavaca)</option>
+        @foreach (SelectListItem x in Model.prodavaci)
+        {
+            if (x.Value == Model.ProdavacId.ToString())
+            {
+                <option value="@x.Value" selected>@x.Text</option>
+            }
+            else
+            {
+                <option value="@x.Value">@x.Text</option>
+            }
+
+        }
+    </select>
+    <label>Unesite odgovor na zahtjev</label>
+    <input type="text" name="Odgovor" />
+
+
+    <br />
+    <br />
+    <input id="submitButton" type="submit" value="Snimi" />
+</form>
+
+<script>
+
+    rootUrl = '@Url.Content("~")'
+
+    $("#submitButton").click(function (event) {
+
+        var forma = $("#formaId");
+        $.ajax({
+
+            type: "POST",
+            url: rootUrl + "/ZahtjevStavke/Snimi",
+            data: forma.serialize(),
+            success: function (rezultat) {
+                $("#nekiId").html(rezultat);
+            }
+        }
+        );
+    });
+
+</script>

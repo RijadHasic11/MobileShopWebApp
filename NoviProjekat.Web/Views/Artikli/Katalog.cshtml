@@ -1,0 +1,65 @@
+﻿@model IEnumerable<NoviProjekat.Data.EntityModels.Artikal>
+
+@{
+    ViewData["Title"] = "Katalog";
+}
+
+<h2>Katalog</h2>
+
+@foreach (var item in Model)
+{
+    <br />
+    <div class="mobitel-katalog" style="width:100%;height:170px;border-bottom:solid 2px grey;">
+        <div class="slika-mob" style="display: flex; justify-content: center;float:left;height:150px;border:solid lightgrey 1px;width:20%">
+            <img style="height:150px;border:solid lightgrey 0px;float:left" class="img-responsive full-width" src="data:image/jpeg;base64,@Convert.ToBase64String(item.Slika)" />
+
+        </div>
+        <div class="naslov-mob" style="float:left;height:150px;background:white;width:60%">
+            <h3 style="margin:0 0 0 15px;">Artikal: @item.Naziv</h3>
+            <h4 style="margin:0 0 0 15px;top:0px;">Proizvodjac: @item.Model.Proizvodjac.Naziv</h4>
+            <h4 style="margin:0 0 0 15px;top:0px;">Model: @item.Model.Naziv</h4>
+            <h4 style="margin:0 0 0 15px;top:0px;">Boja: @item.Boja</h4>
+
+            <img style="height:50px;border:solid lightgrey 0px;float:left;margin:0 0 0 15px;" class="img-responsive full-width" src="data:image/jpeg;base64,@Convert.ToBase64String(item.Model.Proizvodjac.Slika)" />
+
+            @*<p style="margin:0 0 0 70px; top:0px;">Opis: @item.OpisArtikla</p>*@
+        </div>
+        <div class="cijena-mob" style="background:Gainsboro;float:left;height:150px;border:thin grey 1px;width:20%">
+            <h2 style="margin:15px 0 0 15px;top:0px;">@item.Cijena KM</h2>
+            @if (item.Novo == true)
+            {
+                <p style="float:left;margin-top:20%;width:100%;font-size:25px;background:center green;color:white">NOVO</p>
+            }
+            else
+            {
+                <p style="float:left;margin-top:20%;width:100%;font-size:25px;background:center grey;color:black">POLOVNO</p>
+
+
+            }
+        </div>
+
+
+
+        @*<img style="height:150px;border:solid lightgrey 0px;float:left" class="img-responsive full-width" src="data:image/jpeg;base64,@Convert.ToBase64String(item.Slika)" />
+            <h4>@item.Naziv</h4>
+            @if (item.Novo == true)
+            {
+                <p style="float:left;width:100px;font-size:15px;background:center green;color:white">NOVO</p>
+            }
+            else
+            {
+                <p style="float:left;width:100px;font-size:15px;background:center lightgrey;color:black">POLOVNO</p>
+
+            }
+            <br />
+
+            <p style="float:unset;">@item.Model.Proizvodjac.Naziv</p><br />
+            <p style="float:left;">@item.Model.Naziv</p><br />
+            <p style="float:right;">@item.Opis</p>
+            <img style="height:50px;border:solid lightgrey 0px;float:left" class="img-responsive full-width" src="data:image/jpeg;base64,@Convert.ToBase64String(item.Model.Proizvodjac.Slika)" />*@
+
+    </div>
+
+
+}
+

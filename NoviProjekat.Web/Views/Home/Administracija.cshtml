@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "View";
+}
+
+<h2>Administracija</h2>
+<div @*class="l-lista" id="link"style="float:left"*@>
+    <ul class="nav nav-pills nav-stacked" row>
+        <li><a class="btn btn-default" id="a" asp-controller="Kantoni" asp-action="Prikazi">Kantoni</a></li>
+        <li><a class="btn btn-default" id="a" asp-controller="Prodavaci" asp-action="Prikazi">Prodavaci</a></li>
+        <li><a class="btn btn-default" id="a" asp-controller="Serviseri" asp-action="Prikazi">Serviseri</a></li>
+        <li><a class="btn btn-default" id="a" asp-controller="Gradovi" asp-action="Prikazi">Gradovi</a></li>
+        <li><a class="btn btn-default" id="a" asp-controller="Proizvodjaci" asp-action="Prikazi">Proizvodjaci</a></li>
+        <li><a class="btn btn-default" id="a" asp-controller="ModelMobitela" asp-action="Prikazi">Modeli</a></li>
+        <li><a class="btn btn-default" id="a" asp-controller="Artikli" asp-action="Prikazi">Artikli</a></li>
+        <li><a class="btn btn-default" id="a" asp-controller="ObavijestAdmin" asp-action="Prikazi">Admin Obavijesti</a></li>
+    </ul>
+</div>
+<div id="mojAjax" style="border-left:solid grey 1px;float:right;width:85%;"></div>
+
+<script>
+
+    $(function () {
+        $('.l-lista a').click(function () {
+            $('#mojAjax').load(this.href);
+
+            return false;
+        });
+    });
+
+
+
+</script>
+

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    string uniquekey = (string)ViewData["UniqueKey"];
+}
+
+<h2>Login</h2>
+
+    <h4>Google autentifikacija</h4>
+
+    <div>
+        <img src="@ViewBag.BarCodeImage" />
+    </div>
+
+    <div>
+        <label>Iskoristi Google Authenticator aplikaciju na svom mobitelu kako bi skenirao BarCode</label>
+    </div>
+
+  
+        <form asp-action="TwoWayAuthentication">
+
+            <div>
+                <label>Ovde uniste 6-cifreni broj koji ste dobili pomocu Google Authenticator aplikacije</label>
+                <input type="text" name="passcode" />
+            </div>
+            <div>
+                <input type="hidden" name="uniquekey" value="@uniquekey" />
+            </div>
+            <div >
+                <input type="submit" class="form-control btn btn-primary" value="Potvrdi" />
+            </div>
+
+
+</form>

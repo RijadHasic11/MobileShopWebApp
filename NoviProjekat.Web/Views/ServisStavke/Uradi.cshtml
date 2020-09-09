@@ -1,0 +1,63 @@
+﻿@model NoviProjekat.Web.ViewModels.ServisStavkeUradiVM
+@{
+    ViewData["Title"] = "Dodaj";
+}
+
+<h2>Dodaj novi ili uredi postojeci rad na servisu</h2>
+
+<form id="formaId">
+    <input type="hidden" value="@Model.ServisId" name="ServisId" />
+    <input type="hidden" value="@Model.Id" name="Id" />
+
+    <br />
+    <select name="ServiserId">
+        <option>(Odaberite Servisera)</option>
+        @foreach (SelectListItem x in Model.serviseri)
+        {
+            if (x.Value == Model.ServiserId.ToString())
+            {
+                <option value="@x.Value" selected>@x.Text</option>
+            }
+            else
+            {
+                <option value="@x.Value">@x.Text</option>
+            }
+
+        }
+    </select>
+    <br />
+    <br />
+    <label>Unesite opis rada: </label>
+    <input type="text" name="Opis" />
+    <br />
+    <label>Unesite datum zavrsetka rada: </label>
+    <input type="datetime" name="DatumZavrsetkaPosla" />
+    <br />
+    <label>Unesite cijenu: </label>
+    <input type="text" name="Cijena" />
+
+
+    <br />
+    <br />
+    <input id="submitButton" type="submit" value="Snimi" />
+</form>
+
+<script>
+
+    rootUrl = '@Url.Content("~")'
+    $("#submitButton").click(function (event) {
+
+        var forma = $("#formaId");
+        $.ajax({
+
+            type: "POST",
+            url: rootUrl + "/ServisStavke/Snimi",
+            data: forma.serialize(),
+            success: function (rezultat) {
+                $("#nekiId").html(rezultat);
+            }
+        }
+        );
+    });
+
+</script>

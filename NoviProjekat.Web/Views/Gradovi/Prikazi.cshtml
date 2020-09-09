@@ -1,0 +1,42 @@
+﻿@model IEnumerable<NoviProjekat.Data.EntityModels.Grad>
+
+@{
+    ViewData["Title"] = "Prikazi";
+}
+
+<h2>Gradovi</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Dodaj">Dodaj novi grad</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Naziv
+            </th>
+            <th>
+                Kanton
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kanton.Naziv)
+
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Promijeni" asp-route-id="@item.Id">Promijeni</a> |
+                    <a class="btn btn-danger" asp-action="Izbrisi" asp-route-id="@item.Id">Izbriši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

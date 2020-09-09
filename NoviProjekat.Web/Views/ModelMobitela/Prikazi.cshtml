@@ -1,0 +1,42 @@
+﻿@model IEnumerable<NoviProjekat.Data.EntityModels.Model>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Modeli</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Dodaj">Dodaj novi model mobitela</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proizvodjac)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proizvodjac.Naziv)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Promijeni" asp-route-id="@item.Id">Promijeni</a> |
+                    <a class="btn btn-danger" asp-action="Izbrisi" asp-route-id="@item.Id">Izbriši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

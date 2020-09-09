@@ -1,0 +1,37 @@
+﻿@using NoviProjekat.Data.EntityModels
+@using NoviProjekat.Web.ViewModels
+@{
+    ViewData["Title"] = "Uredi";
+    ObavijestDodajVM model = ViewData["podaci"] as ObavijestDodajVM;
+    ObavijestProdavac o1 = ViewData["obavijest"] as ObavijestProdavac;
+}
+
+<h2>Uredi</h2>
+
+<form action="/Obavijest/Snimi">
+
+    <div>
+        <input type="hidden" name="Id" class="form-control" value="@o1.Id" />
+    </div>
+
+    <div class="form-group">
+        <label>Opis: </label>
+        <div>
+            <input type="text" name="Opis" class="form-control" value="@o1.Opis" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Prodavac : </label>
+        <div>
+            <select name="ProdavacId" class="form-control">
+                @foreach (var x in model.prodavac)
+                {
+                    <option value="@x.Value">@x.Text</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <input type="submit" value="Snimi" />
+</form>

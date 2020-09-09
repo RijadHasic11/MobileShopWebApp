@@ -1,0 +1,78 @@
+﻿
+@using NoviProjekat.Web.ViewModels
+
+@model ZahtjevDetaljiVM
+@{
+    ViewData["Title"] = "Detalji";
+
+    string nesto = "";
+    if (Model.Odgovoren == false)
+    {
+        nesto = "NE";
+    }
+    else
+    {
+        nesto = "DA";
+    }
+
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <div class="form-group">
+        <label>DatumZahtjeva: </label>
+        <div>
+            <input type="datetime" class="form-control" readonly value="@Model.DatumZahtjeva" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Opis: </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.Opis" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Prioritet : </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.Prioritet" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Odgovoren : </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@nesto" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Klijent : </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.Klijent" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>BrojOdgovora : </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.BrojOdgovora" />
+        </div>
+    </div>
+
+
+</div>
+
+<div id="nekiId" style="border: 2px black solid"></div>
+
+<script>
+    $(document).ready(function(parameters) {
+        $.get("/ZahtjevStavke/Index?ZahtjevId=@Model.Id",
+            function(rezultat, status) {
+                $("#nekiId").html(rezultat);
+
+            });
+    });
+
+</script>

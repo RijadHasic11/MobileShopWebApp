@@ -1,0 +1,77 @@
+﻿@model IEnumerable<NoviProjekat.Data.EntityModels.Prodavac>
+
+@{
+    ViewData["Title"] = "Prikazi";
+}
+
+<h2>Prodavaci</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Dodaj">Dodaj novog prodavaca</a>
+</p>
+<table style="width:80%" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Osoba.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Osoba.Prezime)
+            </th>
+            <th>
+                Grad
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Osoba.Adresa)
+            </th>
+            <th>
+                Telefon
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Osoba.Email)
+            </th>
+          
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Osoba.Ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Osoba.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Osoba.Grad.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Osoba.Adresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Osoba.BrojTelefona)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Osoba.Email)
+                </td>
+                
+                <td>
+
+                    <a class="btn btn-danger" asp-action="Izbrisi" asp-route-id="@item.Id">Izbriši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

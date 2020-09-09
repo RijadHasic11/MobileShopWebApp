@@ -1,0 +1,33 @@
+﻿@model NoviProjekat.Data.EntityModels.Model
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Brisanje </h2>
+
+<h3>Jeste li sigurni da želite izbrisati ovo?</h3>
+<div>
+    <h4>Model mobitela</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Proizvodjac)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Proizvodjac.Id)
+        </dd>
+    </dl>
+
+    <form asp-action="Izbrisi">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Izbriši" class="btn btn-default" /> |
+        <a class="btn btn-primary" asp-action="Prikazi">Nazad na listu</a>
+    </form>
+</div>

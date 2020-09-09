@@ -1,0 +1,72 @@
+﻿@model NoviProjekat.Data.EntityModels.Prodavac
+
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Uposlenik</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditSave">
+            <input hidden name="ID" value="@Model.Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                Ime
+                <input value="@Model.Osoba.Ime" name="Ime" class="form-control" />
+                <span class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                Prezime
+                <input value="@Model.Osoba.Prezime" name="Prezime" class="form-control" />
+                <span class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                Datum rođenja
+                <input value="@Model.Osoba.DatumRodjenja" name="DatumRodjenja" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Adresa
+                <input value="@Model.Osoba.Adresa" name="adresa" class="form-control" />
+                <span class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                Email
+                <input value="@Model.Osoba.Email" name="email" class="form-control" />
+                <span class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                Grad
+                <select name="gradId" class="form-control" asp-items="ViewBag.GradLista"><option>Izaberi Grad</option></select>
+            </div>
+            <div class="form-group">
+                Telefon
+                <input value="@Model.Osoba.BrojTelefona" name="brojTelefona" class="form-control" />
+                <span class="text-danger"></span>
+
+            </div>
+            
+            <div class="form-group">
+                Datum zaposlenja
+                <input value="@Model.DatumZaposlenja" name="datumZaposlenja" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Prikazi">Back to List</a>
+</div>
+

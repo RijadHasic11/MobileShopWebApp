@@ -1,0 +1,71 @@
+﻿@model NoviProjekat.Data.EntityModels.Serviser
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Serviser</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DodajSave">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Osoba.Ime" class="control-label"></label>
+                <input name="Ime" asp-for="Osoba.Ime" class="form-control" />
+                <span asp-validation-for="Osoba.Ime" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Osoba.Prezime" class="control-label"></label>
+                <input name="Prezime" asp-for="Osoba.Prezime" class="form-control" />
+                <span asp-validation-for="Osoba.Prezime" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Osoba.DatumRodjenja" class="control-label"></label>
+                <input name="DatumRodjenja" asp-for="Osoba.DatumRodjenja" class="form-control" />
+                <span asp-validation-for="Osoba.DatumRodjenja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Osoba.Adresa" class="control-label"></label>
+                <input name="adresa" asp-for="Osoba.Adresa" class="form-control" />
+                <span asp-validation-for="Osoba.Adresa" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Osoba.Email" class="control-label"></label>
+                <input name="email" asp-for="Osoba.Email" class="form-control" />
+                <span asp-validation-for="Osoba.Email" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Osoba.GradId" class="control-label"></label>
+                <select name="gradId" class="form-control" asp-items="ViewBag.GradLista"><option>Izaberi Grad</option></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Osoba.BrojTelefona" class="control-label"></label>
+                <input name="brojTelefona" asp-for="Osoba.BrojTelefona" class="form-control" />
+                <span asp-validation-for="Osoba.BrojTelefona" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="DatumZaposlenja" class="control-label"></label>
+                <input name="datumZaposlenja" asp-for="DatumZaposlenja" class="form-control" />
+                <span asp-validation-for="DatumZaposlenja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Prikazi">Back to List</a>
+</div>
+
+
+

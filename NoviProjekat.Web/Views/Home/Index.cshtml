@@ -1,0 +1,207 @@
+﻿@model IEnumerable<NoviProjekat.Data.EntityModels.ObavijestAdmin>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<img src="~/images/welcome.png" style="width:100%" alt="ASP.NET" class="img-responsive" />
+
+
+<div id="myCarousel" style="width:100%;float:left;padding-right:0px;" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox" style="height:500px">
+        <div class="item active">
+            <img src="~/images/gsmarena.png" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Za više informacija posjetite GSMArena
+                    <a class="btn btn-default" href="https://www.gsmarena.com/">
+                        GSM Arena
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/kuca.jpg" alt="Visual Studio" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Posjetite nas u Sjeverni logor br. 12
+                    <a class="btn btn-default" href="https://www.fit.ba/">
+                        MobShop
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/facebook.jpg" alt="Microsoft Azure" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Posjetite nas i na facebook-u
+                    <a class="btn btn-default" href="https://www.facebook.com/edufitba/">
+                        FIT
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+<br />
+
+<div class="mapa" style="float:left;align-content:center;width:100%;height:50px;">
+    <style>        
+        strong { font-size:20px; padding-left:20px        }
+    </style>
+    <script>
+    </script>
+    <img id="myImg" src="~/images/mapa.png" style="float:left;border:solid black 1px;align-content:center;width:30%;height:100px;" class="img-responsive" />
+    <strong>                      Uvećaj sliku klikom na nju</strong><br />
+    <strong>                      Posjetite nas u Sjeverni logor br. 12</strong>
+
+
+</div>
+<br />
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    modalImg.onclick = function () {
+        modal.style.display = "none";
+    }
+</script>
+<style>
+     /* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@*@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}*@
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@*@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}*@
+</style>
+<div class="caption" style="float:left;width:100%;border-bottom:solid grey 4px;">
+    <br /><br />
+    <div class="naslov" style="float:left;width:100%;border-bottom:solid grey 3px"><h2>Obavijesti</h2></div><br />
+
+    @foreach (var item in Model)
+    {
+        <div class="obavijesti" style="width:100%;border-bottom:solid 1px grey;">
+
+            <h4>@item.Naslov</h4><a asp-controller="ObavijestAdmin" asp-action="Detalji" asp-route-id="@item.Id">Opširnije</a><br />
+            <spam>@item.Text.Substring(0, 200)...</spam>
+
+            <br />
+        </div>
+    }
+</div>
+
+
+

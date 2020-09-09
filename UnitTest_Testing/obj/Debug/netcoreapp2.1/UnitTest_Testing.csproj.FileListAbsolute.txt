@@ -1,0 +1,42 @@
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Web.Views.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Web.Views.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.deps.json
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.runtimeconfig.json
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.runtimeconfig.dev.json
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Data.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Web.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Web.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Data.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.csprojAssemblyReference.cache
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.csproj.CoreCompileInputs.cache
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.AssemblyInfoInputs.cache
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.AssemblyInfo.cs
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.csproj.CopyComplete
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Web.Views.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Web.Views.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.deps.json
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.runtimeconfig.json
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.runtimeconfig.dev.json
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\UnitTest_Testing.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Data.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Web.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Data.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\bin\Debug\netcoreapp2.1\NoviProjekat.Web.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.csprojAssemblyReference.cache
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.csproj.CoreCompileInputs.cache
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.AssemblyInfoInputs.cache
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.AssemblyInfo.cs
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.csproj.CopyComplete
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\UnitTest_Testing\obj\Debug\netcoreapp2.1\UnitTest_Testing.pdb

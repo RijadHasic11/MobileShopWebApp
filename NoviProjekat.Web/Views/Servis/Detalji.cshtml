@@ -1,0 +1,71 @@
+﻿
+@using NoviProjekat.Web.ViewModels
+
+@model ServisDetaljiVM
+@{
+    ViewData["Title"] = "Detalji";
+
+
+
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <div class="form-group">
+        <label>Datum primanja: </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.DatumPrimanja" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Opis: </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.Opis" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Klijent : </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.Klijent" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Artikal : </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.Artikal" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Ukupna cijena: </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.UkupnaCijena" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Datum slanja : </label>
+        <div>
+            <input type="datetime" class="form-control" readonly value="@Model.DatumSlanja" />
+        </div>
+    </div>
+
+
+</div>
+
+<div id="nekiId" style="border: 2px black solid"></div>
+
+<script>
+    $(document).ready(function(parameters) {
+        $.get("/ServisStavke/Index?ServisId=@Model.Id",
+            function(rezultat, status) {
+                $("#nekiId").html(rezultat);
+
+            });
+    });
+
+</script>
+

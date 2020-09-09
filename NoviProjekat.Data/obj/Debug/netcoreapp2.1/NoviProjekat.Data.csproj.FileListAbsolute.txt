@@ -1,0 +1,22 @@
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.deps.json
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.csproj.CoreCompileInputs.cache
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.AssemblyInfoInputs.cache
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.AssemblyInfo.cs
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.runtimeconfig.json
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.runtimeconfig.dev.json
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.dll
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.csprojAssemblyReference.cache
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.deps.json
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.runtimeconfig.json
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.runtimeconfig.dev.json
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\bin\Debug\netcoreapp2.1\NoviProjekat.Data.pdb
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.csprojAssemblyReference.cache
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.csproj.CoreCompileInputs.cache
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.AssemblyInfoInputs.cache
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.AssemblyInfo.cs
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.dll
+C:\Users\hasic_000\Desktop\NoviProjekat - Copy\NoviProjekat.Data\obj\Debug\netcoreapp2.1\NoviProjekat.Data.pdb

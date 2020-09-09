@@ -1,0 +1,43 @@
+﻿@using NoviProjekat.Web.ViewModels
+@using NoviProjekat.Data.EntityModels
+
+@model ServisIndexVM
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<h2>Prikaz Servisa </h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>DatumPrimanja </th>
+            <th>Opis</th>
+            <th>Klijent </th>
+            <th>Artikal </th>
+            <th>Akcija </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.rows)
+        {
+            <tr>
+                <td>@x.DatumPrimanja</td>
+                <td>@x.Opis</td>
+                <td>@x.Klijent</td>
+                <td>@x.Artikal</td>
+
+                <td>
+                    <a href="/Servis/Detalji?ServisId=@x.Id" class="btn btn-primary">Detalji</a>
+                    <a href="/Servis/Obrisi?Id=@x.Id" class="btn btn-danger">Obrisi</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Servis/Dodaj" class="btn btn-success">Dodaj</a>
+

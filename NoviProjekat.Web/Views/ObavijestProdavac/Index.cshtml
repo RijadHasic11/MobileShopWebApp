@@ -1,0 +1,38 @@
+﻿@using NoviProjekat.Data.EntityModels
+@model NoviProjekat.Web.ViewModels.ObavijestIndexVM
+@{
+    ViewData["Title"] = "Index";
+    
+
+}
+
+<h1>Pregled Obavijesti</h1>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Opis: </th>
+            <th>Prodavac: </th>
+            <th>Akcija: </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var x in Model._obavijesti)
+        {
+            <tr>
+                <td>@x.Opis</td>
+                <td>@x.Prodavac</td>
+                <td>
+                    <a href="/ObavijestProdavac/Obrisi?Id=@x.Id" class="btn btn-danger">Obrisi</a>
+                    <a href="/ObavijestProdavac/Uredi?Id=@x.Id" class="btn btn-primary">Uredi</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<a href="/ObavijestProdavac/Dodaj" class="btn btn-success">Dodaj</a>
+
+

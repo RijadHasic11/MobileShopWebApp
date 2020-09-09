@@ -1,0 +1,83 @@
+﻿@using NoviProjekat.Web.ViewModels
+@using NoviProjekat.Data.EntityModels
+@using NoviProjekat.Web.Helper
+
+@model ZahtjevStavkeIndexVM
+@{
+    ViewData["Title"] = "Index";
+
+    //Layout = "_LayoutZahtjev";
+
+    KorisnickiNalog korisnik=Context.GetLogiraniKorisnik();
+
+    string permisija = korisnik.KorisnickoIme;
+
+}
+
+<h2>Spisak odgovora na zahtjev</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Prodavac</th>
+            <th>Odgovor</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.rows)
+        {
+            <tr>
+                <td>@x.Prodavac</td>
+                <td>@x.Odgovor</td>
+                <td>
+                    @if (permisija == "prodavac1")
+                    {
+                        <button class="btn btn-danger" id="dugmeBrisi-@x.Id">Obrisi</button>
+                    }
+                    <script>
+                        $("#dugmeBrisi-@x.Id").click(function (event) {
+
+                            $.get("/ZahtjevStavke/Obrisi?Id=@x.Id"
+                                , function (rezultat, status) {
+                                    $("#nekiId").html(rezultat);
+                                })
+                        });
+
+                    </script>
+                    @if (permisija == "prodavac1")
+                    {
+                        <button class="btn btn-warning" id="dugmeUredi-@x.Id">Uredi</button>
+                    }
+                        <script>
+
+                        $("#dugmeUredi-@x.Id").click(function (event) {
+
+                            $.get("/ZahtjevStavke/Uredi?Id=@x.Id"
+                                , function (rezultat, status) {
+                                    $("#nekiId").html(rezultat);
+                                })
+                        });
+                        </script>
+                    </td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
+
+@if (permisija == "prodavac1")
+{
+<button id="ButtonId" class="btn btn-primary">Odgovori</button>
+}
+<script>
+    
+    $("#ButtonId").click(function (event) {
+
+        $.get("/ZahtjevStavke/Odgovori?ZahtjevId=@Model.ZahtjevId"
+            , function (rezultat, status) {
+                $("#nekiId").html(rezultat);
+            })
+    });
+
+</script>

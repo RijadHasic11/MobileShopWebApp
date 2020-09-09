@@ -1,0 +1,32 @@
+﻿@model NoviProjekat.Data.EntityModels.Grad
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Dodaj grad</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Dodaj">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Naziv" class="control-label"></label>
+                <input asp-for="Naziv" class="form-control" />
+                <span asp-validation-for="Naziv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KantonId" class="control-label"></label>
+                <select asp-for="KantonId" class="form-control" asp-items="ViewBag.KantonLista"><option>Izaberi kanton</option></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Prikazi">Nazad na listu</a>
+</div>

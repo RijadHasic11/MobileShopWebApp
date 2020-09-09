@@ -1,0 +1,87 @@
+﻿@using NoviProjekat.Web.ViewModels
+@using NoviProjekat.Data.EntityModels
+@using NoviProjekat.Web.Helper
+
+@model ServisStavkeIndexVM
+@{
+    ViewData["Title"] = "Index";
+
+    //Layout = "_LayoutZahtjev";
+
+    KorisnickiNalog korisnik = Context.GetLogiraniKorisnik();
+
+    string permisija = korisnik.KorisnickoIme;
+}
+
+<h2>Rad servisera na servisu</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Serviser </th>
+            <th>Opis </th>
+            <th>Datum Zavrsetka Posla</th>
+            <th>Cijena </th>
+            <th>Akcija </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.rows)
+        {
+            <tr>
+                <td>@x.Serviser</td>
+                <td>@x.Opis</td>
+                <td>@x.DatumZavrsetkaPosla</td>
+                <td>@x.Cijena</td>
+                <td>
+                    @if (permisija == "serviser1")
+                    {
+                        <button class="btn btn-danger" id="dugmeBrisi-@x.Id">Obrisi</button>
+                    }
+                    <script>
+                        $("#dugmeBrisi-@x.Id").click(function (event) {
+
+                            $.get("/ServisStavke/Obrisi?Id=@x.Id"
+                                , function (rezultat, status) {
+                                    $("#nekiId").html(rezultat);
+                                })
+                        });
+
+                    </script>
+                    @if (permisija == "serviser1")
+                    {
+                        <button class="btn btn-warning" id="dugmeUredi-@x.Id">Uredi</button>
+                    }
+                    <script>
+
+                        $("#dugmeUredi-@x.Id").click(function (event) {
+
+                            $.get("/ServisStavke/Uredi?Id=@x.Id"
+                                , function (rezultat, status) {
+                                    $("#nekiId").html(rezultat);
+                                })
+                        });
+                    </script>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if (permisija == "serviser1")
+{
+    <button id="ButtonId" class="btn btn-primary">Uradi</button>
+}
+<script>
+
+    $("#ButtonId").click(function (event) {
+
+        $.get("/ServisStavke/Uradi?ServisId=@Model.ServisId"
+            , function (rezultat, status) {
+                $("#nekiId").html(rezultat);
+            })
+    });
+
+</script>
+
+
+

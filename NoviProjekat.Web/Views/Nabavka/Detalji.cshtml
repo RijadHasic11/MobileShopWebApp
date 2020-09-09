@@ -1,0 +1,48 @@
+﻿
+@using NoviProjekat.Web.ViewModels
+
+@model NabavkaDetaljiVM
+@{
+    ViewData["Title"] = "Detalji";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <div class="form-group">
+        <label>DatumNabavke: </label>
+        <div>
+            <input type="datetime" class="form-control" readonly value="@Model.DatumNabavke" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Prodavac : </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.Prodavac" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>BrojArtikala : </label>
+        <div>
+            <input type="text" class="form-control" readonly value="@Model.BrojArtikala" />
+        </div>
+    </div>
+
+
+</div>
+
+<div id="neki" style="border: 2px black solid"></div>
+
+<script>
+    $(document).ready(function(parameters) {
+        $.get("/NabavkaStavke/Index?NabavkaId=@Model.Id",
+            function(rezultat, status) {
+                $("#neki").html(rezultat);
+
+            });
+    });
+
+</script>

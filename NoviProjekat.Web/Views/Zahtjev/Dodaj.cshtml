@@ -1,0 +1,53 @@
+﻿@using NoviProjekat.Web.ViewModels
+@model ZahtjevDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+
+}
+
+<h2>Dodaj novi zahtjev</h2>
+
+
+<form asp-action="Snimi" asp-controller="Zahtjev">
+    <div class="form-group">
+        <label>DatumZahtjeva: </label>
+        <div>
+            <input asp-for="DatumZahtjeva" class="form-control" />
+            <span asp-validation-for="DatumZahtjeva" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Opis: </label>
+        <div>
+            <input asp-for="Opis" class="form-control" />
+            <span asp-validation-for="Opis" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Prioritet: (Manji broj-Veci prioritet)</label>
+        <div>
+            <input asp-for="Prioritet" class="form-control" />
+            <span asp-validation-for="Prioritet" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Klijent : </label>
+        <div>
+            <select name="KlijentId" class="form-control">
+                @foreach (var x in Model.klijenti)
+                {
+                    <option value="@x.Value">@x.Text</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <input type="submit" value="Snimi" />
+</form>
+
+
+

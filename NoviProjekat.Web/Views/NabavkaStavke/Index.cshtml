@@ -1,0 +1,67 @@
+﻿@using NoviProjekat.Web.ViewModels
+
+@model NabavkaStavkeIndexVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Spisak artikala</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Artikal</th>
+            <th>Kolicina</th>
+            <th>UkupnaCijena</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.rows)
+        {
+            <tr>
+                <td>@x.Artikal</td>
+                <td>@x.Kolicina</td>
+                <td>@x.UkupnaCijena</td>
+                <td>
+                    <button class="btn btn-danger" id="dugmeBrisi-@x.Id">Obrisi</button>
+                    <script>
+                        $("#dugmeBrisi-@x.Id").click(function (event) {
+
+                            $.get("/NabavkaStavke/Obrisi?Id=@x.Id"
+                                , function (rezultat, status) {
+                                    $("#neki").html(rezultat);
+                                })
+                        });
+
+                    </script>
+                    <button class="btn btn-warning" id="dugmeUredi-@x.Id">Uredi</button>
+                    <script>
+
+                        $("#dugmeUredi-@x.Id").click(function (event) {
+
+                            $.get("/NabavkaStavke/Uredi?Id=@x.Id"
+                                , function (rezultat, status) {
+                                    $("#neki").html(rezultat);
+                                })
+                        });
+                    </script>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button id="ButtonId" class="btn btn-primary">Dodaj</button>
+<script>
+
+    $("#ButtonId").click(function (event) {
+
+        $.get("/NabavkaStavke/Dodaj?NabavkaId=@Model.NabavkaId"
+            , function (rezultat, status) {
+                $("#neki").html(rezultat);
+            })
+    });
+
+</script>
+

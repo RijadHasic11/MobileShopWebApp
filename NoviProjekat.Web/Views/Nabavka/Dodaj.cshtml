@@ -1,0 +1,37 @@
+﻿
+@using NoviProjekat.Web.ViewModels
+@model NabavkaDodajVM
+@{
+    ViewData["Title"] = "Dodaj";
+
+}
+
+<h2>Dodaj nabavku</h2>
+
+
+<form action="/Nabavka/Snimi">
+    <div class="form-group">
+        <label>DatumNabavke: </label>
+        <div>
+            <input type="date" name="DatumNabavke" class="form-control" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Prodavac : </label>
+        <div>
+            <select name="ProdavacId" class="form-control">
+                @foreach (var x in Model.prodavaci)
+                {
+                    <option value="@x.Value">@x.Text</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <input type="submit" value="Snimi" />
+</form>
+
+
+
